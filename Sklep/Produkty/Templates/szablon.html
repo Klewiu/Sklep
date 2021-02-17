@@ -1,0 +1,7 @@
+    <h1> Witaj w sklepie </h1>
+
+    {% for kat in kategorie %}
+
+    <p><a href = "kategoria/{{ kat.id }}"> {{ kat.nazwa }} </a></p>
+
+    {% endfor  %}
