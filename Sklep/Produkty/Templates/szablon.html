@@ -1,7 +1,33 @@
-    <h1> Witaj w sklepie </h1>
+{% load static %}
 
-    {% for kat in kategorie %}
+<!doctype html>
+<html lang="pl">
 
-    <p><a href = "kategoria/{{ kat.id }}"> {{ kat.nazwa }} </a></p>
+<head>
+    <meta charset="UTF-8" />
+    <title>Sklep main site</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <meta name="description" content="Sklep z czesciami komputerowymi">
+    <meta name="keywords" content="kurs, html, css">
+    <meta name="author" content="Jakub Klewicki">
+    <link rel="shortcut icon" href="{% static 'obrazek.jpg' %}" type="image/x-icon">
+</head>
 
-    {% endfor  %}
+<body>
+<div id = "container1">
+        <h1 id="header"> Witaj w moim sklepie testowym </h1>
+
+         <div id="1">
+            <h3 id="powiatanie"> Fajnie że wpadłeś :) </h3>
+            {% for kat in kategorie %}
+            <p id="kategorie"><a href = "/kategoria/{{ kat.id }}"> {{ kat.nazwa }} </a></p>
+            {% endfor  %}
+        </div>
+
+        <div id = "2">
+            {% block produkt %}     {% endblock produkt %}
+        </div>
+
+    </div>
+</body>
+</html>
