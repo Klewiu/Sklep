@@ -4,8 +4,8 @@
     {% if produkt_user %}
     <h1> {{ produkt_user.nazwa }} </h1>
     <p> Producent: {{ produkt_user.producent }}</p>
-    <p> {{ produkt_user.opis }}</p>
-    <p> {{ produkt_user.cena }}</p>
+    <p> Opis produktu: {{ produkt_user.opis }}</p>
+    <p> Cena: {{ produkt_user.cena }} zł </p>
 
     {% else %}
         <p>Nie ma produktu o takim id.</p>
